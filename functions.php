@@ -46,7 +46,15 @@ function mohcinBn_excerpt_more() {
     $link = '<a class="read-more" href="'.get_the_permalink().'" rel="nofollow">Read More...</a>';
     echo $result. " " . $link;
 }
-//add_filter( 'excerpt_more', 'mohcinBn_excerpt_more' );
+
+// get author name
+function mohcinBn_author() {
+    global $post;
+    $author_id=$post->post_author;
+    $authord = get_the_author_meta( 'display_name', $author_id);
+    echo $authord;
+}
+add_action( 'edit_form_after_title', 'mohcinBn_author' );
 
 // register our styles
 function mohcinBn_register_styles(){

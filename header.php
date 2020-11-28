@@ -69,14 +69,16 @@
             </h1>
             <?php 
             if ( is_front_page() ) : 
-            echo '<span class="subheading">-----------------------</span>';
+            echo '<span class="subheading">-----------------------';
             else : 
-              echo '
-              <span class="meta">Posted by
-              <a href="#">Start Bootstrap</a>
-              on August 24, 2019</span>
-              </div>
-              ';
+              echo '<span class="meta">Posted by  ';
+              
+              mohcinBn_author(); 
+              echo '&nbsp';
+              $post_date = get_the_date( 'D M j' ); echo $post_date;
+
+              echo '</span>';
+              
             endif 
           ?>
           </div>
