@@ -67,7 +67,18 @@
               endif 
             ?>
             </h1>
-            <span class="subheading">-----------------------</span>
+            <?php 
+            if ( is_front_page() ) : 
+            echo '<span class="subheading">-----------------------</span>';
+            else : 
+              echo '
+              <span class="meta">Posted by
+              <a href="#">Start Bootstrap</a>
+              on August 24, 2019</span>
+              </div>
+              ';
+            endif 
+          ?>
           </div>
         </div>
       </div>

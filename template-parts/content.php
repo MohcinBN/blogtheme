@@ -44,8 +44,8 @@
 	<?php else : ?>
 	<div class="entry-content">
 		<?php
-			//the_content();
-			mohcinBn_excerpt_more();
+			the_content();
+			
 		?>
 	</div>
 	<?php endif; ?>
